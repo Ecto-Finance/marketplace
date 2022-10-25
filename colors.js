@@ -153,6 +153,18 @@ const primaryColors = {
     700: '#374151',
     900: '#111827',
   },
+  seagull: {
+    50: '#FFFFFF',
+    100: '#FFFFFF',
+    200: '#EDFAFE',
+    300: '#C6EEFC',
+    400: '#A0E3F9',
+    500: '#79D8F7',
+    600: '#44C9F4', 
+    700: '#0FB9F1', // DEFAULT
+    800: '#0B91BC',
+    900: '#086888'
+  },
   default: {
     100: '#F1E5FF',
     300: '#E2CCFF',
