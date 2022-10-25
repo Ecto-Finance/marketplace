@@ -49,6 +49,8 @@ import {
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
 
+import { ChakraProvider } from '@chakra-ui/react'
+
 // Select a custom ether.js interface for connecting to a network
 // Reference = https://wagmi-xyz.vercel.app/docs/provider#provider-optional
 // OPTIONAL
@@ -194,9 +196,11 @@ const App: FC<AppProps & { baseUrl: string }> = ({
               theme={rainbowKitTheme}
               modalSize="compact"
             >
-              <AnalyticsProvider>
+              {/* <AnalyticsProvider> */}
+              <ChakraProvider>
                 <Component {...pageProps} />
-              </AnalyticsProvider>
+              </ChakraProvider>
+              {/* </AnalyticsProvider> */}
             </RainbowKitProvider>
           </WagmiConfig>
         </RecoilRoot>
