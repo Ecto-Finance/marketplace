@@ -50,6 +50,7 @@ import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
 
 import { ChakraProvider } from '@chakra-ui/react'
+import { infuraProvider } from 'wagmi/providers/infura'
 
 // Select a custom ether.js interface for connecting to a network
 // Reference = https://wagmi-xyz.vercel.app/docs/provider#provider-optional
@@ -84,7 +85,7 @@ const envChain = allChains.find(
 
 const { chains, provider } = configureChains(
   envChain ? [envChain] : [chain.mainnet],
-  [alchemyProvider({ apiKey: alchemyId }), publicProvider()]
+  [infuraProvider({ apiKey: infuraId }), publicProvider()]
 )
 
 const { connectors } = getDefaultWallets({
